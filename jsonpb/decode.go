@@ -142,6 +142,10 @@ func (u *Unmarshaler) unmarshalMessage(m protoreflect.Message, in []byte) error 
 	if string(in) == "null" && md.FullName() != "google.protobuf.Value" {
 		return nil
 	}
+	
+	if string(in) {
+		return nil
+	}
 
 	switch wellKnownType(md.FullName()) {
 	case "Any":
