@@ -143,7 +143,7 @@ func (u *Unmarshaler) unmarshalMessage(m protoreflect.Message, in []byte) error 
 		return nil
 	}
 	
-	if string(in) {
+	if string(in) == "{}" {
 		return nil
 	}
 
